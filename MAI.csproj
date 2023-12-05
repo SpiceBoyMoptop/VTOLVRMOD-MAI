@@ -1,0 +1,443 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WMC\WMC.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Accessibility">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Accessibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="BDLearningBot">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\BDLearningBot.dll</HintPath>
+    </Reference>
+    <Reference Include="Core">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Win64">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
+    <Reference Include="FlatBuffers">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\FlatBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="HttpAuth">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\HttpAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ModLoader">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_ModLoader\ModLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Mono.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Mono.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.WebBrowser">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Mono.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="MP3Sharp">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\MP3Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Novell.Directory.Ldap">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Novell.Directory.Ldap.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.LipSync">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Oculus.LipSync.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.Platform">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Oculus.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.VR">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Oculus.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="Purchasing.Common">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Purchasing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Core">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Rewired_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Windows">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Rewired_Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleTCP">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\SimpleTCP.dll</HintPath>
+    </Reference>
+    <Reference Include="SteamVR">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\SteamVR.dll</HintPath>
+    </Reference>
+    <Reference Include="SteamVR_Actions">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\SteamVR_Actions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Diagnostics.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.DirectoryServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Drawing.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.EnterpriseServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Runtime.Serialization.Formatters.Soap.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Internals">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.ServiceModel.Internals.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Web.ApplicationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Subsystem.Registration">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.Subsystem.Registration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.XR.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Oculus">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.XR.Oculus.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenVR">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.XR.OpenVR.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.XR.OpenXR.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.ConformanceAutomation">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.XR.OpenXR.Features.ConformanceAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.MockRuntime">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.XR.OpenXR.Features.MockRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Unity.XR.OpenXR.Features.RuntimeDebugger.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Monetization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.AppleCore">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Purchasing.AppleCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.AppleMacosStub">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Purchasing.AppleMacosStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.AppleStub">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Purchasing.AppleStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.Codeless">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Purchasing.Codeless.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityCore">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityStub">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.Stores">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Purchasing.Stores.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.WinRTCore">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Purchasing.WinRTCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.WinRTStub">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.Purchasing.WinRTStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UIElementsNativeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Valve.Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\Valve.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="VTBitConverter">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\VTOL VR\VTOLVR_Data\Managed\VTBitConverter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
